@@ -11,75 +11,45 @@
       <button class="btn btn-default" style="width:100%;background-color:rgba(144, 238, 144, 0.397); border-color:rgba(144, 238, 144, 0.397) ;"
        type="button" data-toggle="dropdown" >Dry fruits
       </button>
-      <ul>
-        <li>Badam</li>
-        <li>Pista</li>
-        <li>ksah</li>
-        <li>many more</li>
-      </ul>
+      
   
       <ng-multiselect-dropdown-angular7
   
-      [placeholder]="'select from here'"
+      [placeholder]="'Filter Dry fruits'"
       [data]="dropdownList1"
-      [(ngModel)]="selItems1"
-      [settings]="ddsettings"
-      (onSelect)="onitemsel($event)"
-      (onDeSelect)="onItemDeSelect($event)"
-      (onSelectAll)="onselall($event)"
-      (onDeSelectAll)="ondeselall($event)"
+      [(ngModel)]="seldry"
+      [settings]="filtersettings"
+      (onSelect)="onitemseldry($event)"
+      (onDeSelect)="onitemseldry($event)"
+      (onSelectAll)="onitemselalldry($event)"
+      (onDeSelectAll)="onItemDeSelectalldry($event)"
       
       ></ng-multiselect-dropdown-angular7>
-      <button class="btn btn-default" style="width:100%;background-color:rgba(144, 238, 144, 0.397); border-color:rgba(144, 238, 144, 0.397) ;"
-       type="button" data-toggle="dropdown" >Spices
-      </button>
-      <ul>
-        <li>Chilli Powder</li>
-      </ul>
-      <ng-multiselect-dropdown-angular7
-  
-      [placeholder]="'select from here'"
-      [data]="dropdownList2"
-      [(ngModel)]="selItems"
-      [settings]="ddsettings"
-      (onSelect)="onitemsel($event)"
-      (onDeSelect)="onItemDeSelect($event)"
-      (onSelectAll)="onselall($event)"
-      (onDeSelectAll)="ondeselall($event)"
-      
-      ></ng-multiselect-dropdown-angular7>
-      <!-- <button class="btn btn-default" style="width:100%;background-color:rgba(144, 238, 144, 0.397); border-color:rgba(144, 238, 144, 0.397) ;"
-       type="button" data-toggle="dropdown" >Price
-      </button>
-      <ul>
-        <li>Chilli Powder</li>
-      </ul>
-      <ng-multiselect-dropdown-angular7
-  
-      [placeholder]="'select from here'"
-      [data]="filterprice"
-      [(ngModel)]="selItems3"
-      [settings]="filterpricesettings"
-      (onSelect)="onitemselprice($event)"
-      (onDeSelect)="onItemDeSelectprice($event)"
-      (onSelectAll)="onselallprice($event)"
-      (onDeSelectAll)="ondeselallprice($event)"
-      
-      ></ng-multiselect-dropdown-angular7> -->
       
       <div class="dropdown">
         <button class="btn btn-default dropdown-toggle" style="width:100%;background-color:rgba(144, 238, 144, 0.397);
+         border-color:rgba(144, 238, 144, 0.397) ;" type="button" data-toggle="dropdown">rating</button>
+          <ng-multiselect-dropdown-angular7
+          [placeholder]="'filter rate'"
+          [data]="filterrate"
+          [(ngModel)]="selrate"
+          [settings]="filterpricesettings"
+          (onSelect)="onitemselrat($event)"
+        (onDeSelect)="onItemDeSelectrat($event)"
+       
+          ></ng-multiselect-dropdown-angular7>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" style="width:100%;background-color:rgba(144, 238, 144, 0.397);
         border-color:rgba(144, 238, 144, 0.397) ;" type="button" >Price</button>
-    
         <ng-multiselect-dropdown-angular7
-    
         [placeholder]="'filter price'"
         [data]="filterprice"
         [(ngModel)]="selprice"
         [settings]="filterpricesettings"
         (onSelect)="onitemselprice($event)"
         (onDeSelect)="onItemDeSelectprice($event)"
-        (onSelectAll)="onselall($event)"
+        
         
         ></ng-multiselect-dropdown-angular7>
 
@@ -253,10 +223,10 @@
               </div>
               <br>
               <div class="row font">
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-5">
+                  <div class="col-lg-5 col-md-4 col-sm-4 col-5">
               <button class="btn_V " (click)="details(i)" routerLink="/proDetails" ><i class='fa fa-eye' style="margin-right:5px;"></i>view</button>
           </div>
-          <div class="col-lg-8 col-md-8 col-sm-8 col-7" style="margin-left:0px;">
+          <div class="col-lg-7 col-md-8 col-sm-8 col-7" style="margin-left:0px;">
             <button class="btn_V "  (click)="senddata(i)"><i class="fa fa-shopping-cart" ></i>{{post.carbutton}}</button>
           </div>
           </div>
