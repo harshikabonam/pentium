@@ -10,9 +10,6 @@ offer:string;
 button:string;
 carbutton:string;
 carheart:string;
-   
-    
-
 }
 
 export interface Iprice{
@@ -21,6 +18,15 @@ export interface Iprice{
     item_text:string;
     min:number;
     max:number;
+        
+    
+}
+
+export interface Irate{
+
+    item_id:number;
+    item_text:string;
+  
         
     
 }
